@@ -66,4 +66,19 @@ a{
 }
 
 /* Styling the Main Part */
+.slider{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 84%);
+}
 
+.sliderWrapper{
+    display: flex;
+    width:500vw;
+    
+}
+
+.sliderItem{
+    width:100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
