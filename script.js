@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Auto Slidin Images Code Part
+
+    /* --------------------------------------------------------------------------------------------------------- */
     let interfaceDiv = document.querySelector(".slide");
 
     let slideContainer = interfaceDiv.querySelector(".slideContainer");
@@ -70,4 +73,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         dots[counter].className += " active";
     }
+
+    /* --------------------------------------------------------------------------------------------------------- */
 });
