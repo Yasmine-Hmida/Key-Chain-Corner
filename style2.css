@@ -3,7 +3,7 @@
     /* The product must have position relative */
     border:0.1px solid black;
     width:500px;
-    height:510px;
+    height:640px;
     background-color:#ffe5ec; 
     position: absolute;
     top:0;
@@ -18,6 +18,7 @@
     -webkit-box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
     -moz-box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
     box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
+    z-index:70;
 }
 
 .title{
@@ -25,7 +26,7 @@
     justify-content: space-between;
 }
 
-.payTitle{
+.payTitle, .done{
     font-size: 20px;
     color:#ff006e;
 }
@@ -67,6 +68,11 @@ label{
 .cardIcon{
     margin-right:10px;
     cursor:pointer;
+    border-radius:10px;
+}
+
+.cardIcon:hover, .selected {
+    border: 2px solid gray;
 }
 
 .cardInfo{
@@ -77,6 +83,10 @@ label{
 
 .sm{
     width:28%;
+}
+
+.xsm{
+    width:10%;
 }
 
 .payButton{
