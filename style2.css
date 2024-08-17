@@ -1,0 +1,96 @@
+/* Modal Styling */
+.payment{
+    /* The product must have position relative */
+    border:0.1px solid black;
+    width:500px;
+    height:510px;
+    background-color:#ffe5ec; 
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    margin: auto;
+    padding:10px 50px;
+    display:none;
+    /* When I click on buy button change to dispaly flex */
+    flex-direction:column;
+    -webkit-box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
+    -moz-box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
+    box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
+}
+
+.title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.payTitle{
+    font-size: 20px;
+    color:#ff006e;
+}
+
+.close{
+    background-color: #ff006e;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 20px;
+    font-weight: bolder;
+    cursor: pointer;
+    border:1px solid black;
+}
+
+label{
+    font-size: 14px;
+    font-weight: 300;
+    color:#fb6f92;
+}
+
+.payInput{
+    padding:10px;
+    margin: 10px 0px;
+    border:none;
+    border-bottom: 2px solid gray;
+    background-color: #ffe5ec;
+}
+
+.payInput::placeholder{
+    color:gray;
+}
+
+.cardIcons{
+    display: flex;
+}
+
+.cardIcon{
+    margin-right:10px;
+    cursor:pointer;
+}
+
+.cardInfo{
+   display: flex;
+   justify-content:space-between;
+   margin-left: 10px; 
+}
+
+.sm{
+    width:28%;
+}
+
+.payButton{
+    position:absolute;
+    height:40px;
+    bottom:0;
+    width:100%;
+    left:0;
+    background-color: #fb6f92;
+    color:white;
+    border:none;
+    -webkit-box-shadow: 5px -5px 14px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px -5px 14px -4px rgba(0,0,0,0.75);
+    box-shadow: 5px -5px 14px -4px rgba(0,0,0,0.75);
+    cursor:pointer;
+    font-size: medium;
+}
