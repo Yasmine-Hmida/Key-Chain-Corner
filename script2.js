@@ -6,14 +6,17 @@ const close = document.querySelector(".close");
 const cardIcons = document.querySelectorAll(".cardIcon");
 const orderDone = document.querySelector(".done");
 
+// When I Click on the Buy Button, THEN the Modal will Appear
 productButton.addEventListener("click",()=>{
     payment.style.display="flex";
 });
 
+// When I Click on the Close Button, THEN the Modal will Disappear
 close.addEventListener("click",()=>{
     payment.style.display="none";
 })
 
+// Toggle the Card Icons when Selected
 cardIcons.forEach((cardIcon) => {
     cardIcon.addEventListener("click", (event) => {
         event.target.classList.toggle("selected");
@@ -21,6 +24,7 @@ cardIcons.forEach((cardIcon) => {
     
 });
 
+// Hnadle the Submitting
 payButton.addEventListener("click",()=>{
     orderDone.innerHTML="Ordered! Thanks For Shopping from Us!";
 });
