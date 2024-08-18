@@ -76,3 +76,71 @@ a{
 }
 
 /* Styling the Footer */
+footer{
+    display: flex;
+
+}
+
+.footerLeft{
+    flex:2;
+    display: flex;
+    justify-content: space-around;
+    padding:50px;
+}
+
+.fMenuTitle{
+    font-size: 16px;
+    color:#ff006e;
+}
+
+.fMenuList{
+    padding:0;
+    list-style: none;
+}
+
+.fListItem{
+    margin-bottom: 10px;
+    color:gray;
+    cursor:pointer;
+}
+
+.fListItem:hover{
+    border-bottom: 0.5px solid lightgray;
+}
+
+.footerRight{
+    flex:1;
+    padding:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fInput{
+    padding:5px;
+}
+
+.fButton{
+    padding:5px;
+    background-color:#ff006e;
+    border:1px solid #ff006e;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.fIcons{
+    display: flex;
+}
+
+.fIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor:pointer;
+}
+
+.copyright{
+   font-weight: 300; 
+   font-size: 14px;
+}
