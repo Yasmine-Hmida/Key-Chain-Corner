@@ -181,3 +181,24 @@ span.next:hover , span.prev:hover{
     width:50%;
     height:100px;
 }
+
+/* Gallery Styling */
+.gallery{
+    background-color:#f8edeb ;
+    padding:50px;
+    display: flex;
+}
+
+.galleryItem{
+   flex: 1; 
+   padding:50px;
+}
+
+.galleryImg{
+    width:100%;
+    border:1px solid gray;
+}
+
+.galleryTitle{
+    color:#ff006e;
+}
