@@ -104,3 +104,16 @@ label{
     cursor:pointer;
     font-size: medium;
 }
+
+/* Responsive Part */
+@media screen and (max-width:480px){
+    .payment{
+        width:60%;
+    }
+}
+
+@media screen and (min-width:480px){
+    .payment{
+        width:50%;
+    }
+}

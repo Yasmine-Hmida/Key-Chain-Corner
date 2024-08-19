@@ -202,3 +202,45 @@ span.next:hover , span.prev:hover{
 .galleryTitle{
     color:#ff006e;
 }
+
+/* Responsive Part */
+@media screen and (max-width:480px) {
+    .slide{
+        clip-path: none;
+    }
+
+    .welcomeHeading{
+        font-size: x-large;
+    }
+
+    .welcomeDesc{
+        font-size: larger;
+    }
+
+    .welcomeHeading, .welcomeDesc{
+        text-align: center;
+    }
+
+    .features{
+        flex-direction: column;
+    }
+
+    .gallery{
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:610px){
+    .slide{
+        width: 100%;
+    }
+    .features{
+        flex-wrap:wrap;
+    }
+
+    .gallery{
+        flex-direction: column;
+        padding: 10px;
+    }
+}

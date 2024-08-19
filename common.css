@@ -4,6 +4,7 @@ body{
     padding:0;
     margin:0;
     background-color: white; 
+    box-sizing: border-box;
 }
 
 /* Styling the Navbar */
@@ -18,6 +19,7 @@ nav{
 }
 
 .navBar{
+    width:100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -143,4 +145,57 @@ footer{
 .copyright{
    font-weight: 300; 
    font-size: 14px;
+}
+
+/* Responsive Part */
+@media screen and (max-width:480px) {
+    nav{
+        padding:20px;
+    }
+
+    .search{
+        display:none;
+    }
+
+    #logo{
+        font-size: large;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerLeft, .footerRight{
+        padding: 20px;
+        width:90%;
+    }
+
+    .footerRight{
+        align-items: center;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:610px){
+    body{
+        width: 100%;
+    }
+
+    #logo{
+        font-size: large;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footerLeft, .footerRight{
+        padding: 20px;
+        width:90%;
+    }
+
+    .footerRight{
+        align-items: center;
+    }
 }
