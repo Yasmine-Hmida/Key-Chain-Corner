@@ -1,19 +1,65 @@
+/* Products Styling */
+.itemContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: #f8edeb;
+    padding:10px;
+    position:relative;
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-left: 10px;
+    border:1px solid #fb6f92;
+    padding:10px;
+}
+
+.itemImg{
+    width:100%;
+    height: 300px;
+}
+
+.itemTitle{
+    font-family: "Matemasie", sans-serif;
+    color:#ff006e;
+    text-align: center;
+    font-size: x-large;
+}
+
+.itemPrice{
+    color:#fb6f92;
+}
+
+.productButton{
+    background-color: #ff006e;
+    color:white;
+    font-size: x-large;
+    padding:5px;
+    border: 0.5px solid gray;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
 /* Modal Styling */
 .payment{
-    /* The product must have position relative */
     border:0.1px solid black;
     width:500px;
     height:640px;
     background-color:#ffe5ec; 
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin: auto;
     padding:10px 50px;
     display:none;
-    /* When I click on buy button change to dispaly flex */
     flex-direction:column;
     -webkit-box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
     -moz-box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
@@ -110,10 +156,32 @@ label{
     .payment{
         width:60%;
     }
+
+    .itemContainer{
+        padding:0;
+    }
+
+    .items{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item{
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (min-width:480px){
     .payment{
         width:50%;
+    }
+
+    .items{
+        flex-wrap: wrap;
+    }
+
+    .item{
+        margin-bottom: 10px;
     }
 }

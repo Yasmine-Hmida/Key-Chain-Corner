@@ -1,5 +1,5 @@
 // Manipulating the Modal
-const productButton = document.querySelector(".productButton"); 
+const productButtons = document.querySelectorAll(".productButton"); 
 const payButton = document.querySelector(".payButton");
 const payment = document.querySelector(".payment");
 const close = document.querySelector(".close");
@@ -7,9 +7,12 @@ const cardIcons = document.querySelectorAll(".cardIcon");
 const orderDone = document.querySelector(".done");
 
 // When I Click on the Buy Button, THEN the Modal will Appear
-productButton.addEventListener("click",()=>{
-    payment.style.display="flex";
+productButtons.forEach((productButton) => {
+    productButton.addEventListener("click",()=>{
+        payment.style.display="flex";
+    });
 });
+
 
 // When I Click on the Close Button, THEN the Modal will Disappear
 close.addEventListener("click",()=>{
