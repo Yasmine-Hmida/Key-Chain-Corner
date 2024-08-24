@@ -117,7 +117,7 @@ label{
     border-radius:10px;
 }
 
-.cardIcon:hover, .selected {
+.cardIcon:hover,#visa, .selected {
     border: 2px solid gray;
 }
 

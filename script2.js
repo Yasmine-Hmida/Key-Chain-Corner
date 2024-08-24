@@ -19,37 +19,36 @@ close.addEventListener("click",()=>{
     payment.style.display="none";
 })
 
-// Toggle the Card Icons when Selected
-cardIcons.forEach((cardIcon) => {
-    cardIcon.addEventListener("click", (event) => {
-        event.target.classList.toggle("selected");
-    });
-    
+// Toggle the Visa Card and the Border is Initially There
+const visa = document.querySelector("#visa");
+var borderThere = true;
+visa.addEventListener("click",function(){
+    if (borderThere){
+        borderThere = false;
+        this.style.border = 'none';
+    } 
+    else{
+        borderThere = true;
+        this.style.border = '2px solid gray';
+    }
 });
 
-let visaClicked = false;
-let masterCardClicked = false;
+// Toggle the MasterCards when Selected
+const masterCard = document.querySelector("#mastercard");
+masterCard.addEventListener("click", (event) => {
+    event.target.classList.toggle("selected");
+});
+    
 // Hnadle the Submitting and Form Validation
 payButton.addEventListener("click",()=>{
     // Get the Input Fields Every time you Click
     const fullName = document.querySelector("#name").value;
     const phoneNumber = document.querySelector("#phoneNumber").value;
     const Address = document.querySelector("#Address").value;
-    const visa = document.querySelector("#visa");
-    const masterCard = document.querySelector("#mastercard");
     const cardNumber = document.querySelector("#cardNumber").value;
     const month = document.querySelector("#month").value;
     const day = document.querySelector("#day").value;
     const year = document.querySelector("#year").value;
-
-    // Add Event Listeners for the visa and MasterCard
-    visa.addEventListener('click', function() {
-        visaClicked = true;
-    });
-    
-    masterCard.addEventListener('click', function() {
-        masterCardClicked = true;
-    });
     
     // Form Validation
     if (fullName ==="" || phoneNumber ==="" || Address ==="" || cardNumber ==="" || month ==="" || day ==="" || year ==="") {
@@ -70,10 +69,6 @@ payButton.addEventListener("click",()=>{
 
     else if(month.length !== 2 || day.length !== 2 || year.length !== 4){
         orderDone.innerHTML="Date is Wrong. Please Fix the Date!";
-    }
-
-    else if (!visaClicked || !masterCardClicked) {
-        orderDone.innerHTML="Please Choose Card to Buy!";
     }
 
     else{
