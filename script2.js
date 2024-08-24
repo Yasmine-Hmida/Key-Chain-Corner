@@ -63,10 +63,6 @@ payButton.addEventListener("click",()=>{
         orderDone.innerHTML="Card Number Should have 16 Digits. Please Try Again!";
     }   
 
-    else if(phoneNumber.length !== 8){
-        orderDone.innerHTML="Phone Number Should have 8 Digits. Please Try Again!";
-    }
-
     else if(month.length !== 2 || day.length !== 2 || year.length !== 4){
         orderDone.innerHTML="Date is Wrong. Please Fix the Date!";
     }
