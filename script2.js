@@ -5,7 +5,7 @@ const payment = document.querySelector(".payment");
 const close = document.querySelector(".close");
 const cardIcons = document.querySelectorAll(".cardIcon");
 const orderDone = document.querySelector(".done");
-
+ 
 // When I Click on the Buy Button, THEN the Modal will Appear
 productButtons.forEach((productButton) => {
     productButton.addEventListener("click",()=>{
@@ -39,7 +39,7 @@ masterCard.addEventListener("click", (event) => {
     event.target.classList.toggle("selected");
 });
     
-// Hnadle the Submitting and Form Validation
+// Handle the Submitting and Form Validation
 payButton.addEventListener("click",()=>{
     // Get the Input Fields Every time you Click
     const fullName = document.querySelector("#name").value;

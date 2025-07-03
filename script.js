@@ -1,8 +1,8 @@
-// Auto Slidin Images Code Part
+// Auto Sliding Images Code Part
 let interfaceDiv = document.querySelector(".slide");
 
 let slideContainer = interfaceDiv.querySelector(".slideContainer");
-    
+     
 let slideDiv = slideContainer.querySelector(".slides"); 
 
 // Access the Images

@@ -1,6 +1,6 @@
 /* Products Styling */
 .itemContainer{
-    display: flex;
+    display: flex; 
     flex-direction: column;
     background-color: #f8edeb;
     padding:10px;
