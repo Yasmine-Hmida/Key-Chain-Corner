@@ -40,6 +40,11 @@ a{
     font-size: 25px;
 }
 
+#navBtn{
+    display:flex;
+    padding:0;
+}
+
 .search{
     display: flex;
     align-items: center;
@@ -66,6 +71,7 @@ a{
 .linkbtn{
     font-size: 20px;
     border-bottom: 2px solid gray;
+    height:30px;
 }
 
 .linkbtn{
