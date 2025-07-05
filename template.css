@@ -26,7 +26,7 @@
     transition:0.5s;
 }
 
-.cartTab h1{
+.cartTab #shopTitle{
     padding:20px;
     text-align: center;
     margin:0;
@@ -53,6 +53,22 @@
 
 .cartTab .listCart{
     overflow:auto; /* for a scroll bar*/
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cartTab #shopBag{
+    width:300px;
+    height: 300px;
+}
+
+.cartTab .listCart #empty{
+    color:gray;
+    font-family: "Abel", sans-serif;
+    font-weight: 100;
+    font-size: large;
 }
 
 .cartTab .listCart::-webkit-scrollbar{
