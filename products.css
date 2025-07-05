@@ -77,7 +77,7 @@
     color:#ff006e;
 }
 
-.close{
+.closeBtn{
     background-color: #ff006e;
     width: 25px;
     height: 25px;
@@ -109,7 +109,7 @@ label{
 
 .cardIcons{
     display: flex;
-}
+} 
 
 .cardIcon{
     margin-right:10px;

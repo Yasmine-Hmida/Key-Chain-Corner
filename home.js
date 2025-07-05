@@ -11,7 +11,7 @@ const initSlider = () => {
 
     let counter = 0;
     let deletInterval;
-
+ 
     function slideNext(){
         slideImages[counter].style.animation = "next1 0.5s ease-in forwards";
         counter = (counter + 1) % slideImages.length;
@@ -45,7 +45,7 @@ const initSlider = () => {
     slideContainer.addEventListener("mouseout", autoSliding);
 
     // Start auto sliding
-    autoSliding();
+    autoSliding(); 
 }
 
 export default initSlider;

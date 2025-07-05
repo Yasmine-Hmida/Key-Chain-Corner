@@ -1,4 +1,4 @@
-// Coding the Logic Part of Loading and putting everything together
+// Coding the Logic Part of Loading and putting everything together of the Home Page
 
 import cart from './template.js'
 import initSlider from './home.js'; // import the slider logic
@@ -12,12 +12,12 @@ const loadTemplate = () => {
     .then(response => response.text())
     .then(html => {
         app.innerHTML = html;
-
+        
         let contentTab = document.getElementById('contentTab') /* Replacement of the Changing Content */
         contentTab.innerHTML = temporaryContent.innerHTML
         temporaryContent.innerHTML = null;
-        cart()
         initSlider()
+        cart()
         // initApp() // perform function related to the current page
     })
 }
