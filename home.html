@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Key Chain Corner</title>
+    <link rel="icon" href="images/chain.png">
+
+    <link rel="stylesheet" href="template.css">  <!-- Styling of the Template -->
+    <link rel="stylesheet" href="home.css">     <!-- Styling of the rest of the home page -->
+    
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Matemasie&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Dosis:wght@200..800&family=Matemasie&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div id="app"></div> <!-- This is where the template will be in -->
+
+    <div id="temporaryContent"> <!-- This is where changing content is -->
+
+        <!-- Welcome Phrase -->
+        <div class="welcomeDiv">
+            <span class="welcomeHeading">Welcome to Key Chain Corner</span>
+            <span class="welcomeDesc">The Best Online Key Chain Store in Tunisia</span>
+        </div>
+
+        <!-- AutoSliding Images Creation -->
+        <div class="slide">
+            <div class="slideContainer">
+        
+                <div class="slides">
+                    <img src="images/London.jpg" alt="London Key Chains" class="active slideImage">
+                    <img src="images/Cotton.jpg" alt="Cotton Key Chains" class="slideImage">
+                    <img src="images/Personalized.jpg" alt="Personalized Key Chains" class="slideImage">
+                </div>
+        
+                <div class="buttons">
+                    <span class="next">&#10095;</span>
+                    <span class="prev">&#10094;</span>
+                </div>
+        
+                <div class="dotsContainer">
+                    <div class="dot active" attr="0"></div>
+                    <div class="dot" attr="1"></div>
+                    <div class="dot" attr="2"></div>
+                </div>
+            </div>
+        </div> 
+
+        <!-- Features Creation -->
+        <div class="features">
+            <div class="feature">
+                <img src="images/shipped.png" alt="Shipping Icon" class="featureIcon">
+                <span class="featureTitle">FAST DELIEVERY</span>
+                <span class="featureDescription">2 Days Maximum all Over Tunisia.</span>
+            </div>
+
+            <div class="feature">
+                <img src="images/quality.png" alt="Quality Icon" class="featureIcon">
+                <span class="featureTitle">BEST QUALITIES</span>
+                <span class="featureDescription">Best Looking Key CHains.</span>
+            </div>
+
+            <div class="feature">
+                <img src="images/good-price.png" alt="Good Price Icon" class="featureIcon">
+                <span class="featureTitle">REASONABLE PRICES</span>
+                <span class="featureDescription">Best Prices for the Quality.</span>
+            </div>
+
+            <div class="feature">
+                <img src="images/support.png" alt="Support Icon" class="featureIcon">
+                <span class="featureTitle">CONTACT US!</span>
+                <span class="featureDescription">A Whole Team to Contact if Needed.</span>
+            </div>
+        </div>
+
+        <!-- Gallery Creation -->
+        <div class="gallery">
+            <div class="galleryItem">
+                <h1 class="galleryTitle">Come and Get From Us!</h1>
+                <img src="images/Cultural KeyChain.jpg" alt="Cultural KeyChain" class="galleryImg">
+            </div>
+
+            <div class="galleryItem">
+                <img src="images/Circle KeyChains.jpg" alt="Circle KeyChain" class="galleryImg">
+                <h1 class="galleryTitle">Best Quality!</h1>
+            </div>
+
+            <div class="galleryItem">
+                <h1 class="galleryTitle">Various Key Chains!</h1>
+                <img src="images/Fish KeyChains.jpg" alt="Fish KeyChain" class="galleryImg">
+            </div>
+        </div>
+
+    </div>
+    
+    <script type="module" src="home.js"></script>
+    <script type="module" src="logic.js"></script>
+</body>
+</html>

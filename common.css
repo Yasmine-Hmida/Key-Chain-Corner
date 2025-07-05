@@ -145,10 +145,12 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .fInput{
     padding:5px;
+    margin: 5px;
 }
 
 .fButton{

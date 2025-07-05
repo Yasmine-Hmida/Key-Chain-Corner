@@ -7,19 +7,18 @@
     align-items: center;
     margin-top: 8px;
 }
-
+ 
 .welcomeHeading{
     font-family: "Matemasie", sans-serif;
     color:#ff006e;
     font-size: xx-large;
     margin:5px;
-}
+} 
 
 .welcomeDesc{
     font-size: x-large;
     font-weight: bold;
     color:gray;
-    /* color:#f4acb7; */
 }
 
 /* Styling the SliderImages Part */
@@ -28,7 +27,6 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    /* margin-top: 8px; */
     padding-top: 30px;
     padding-bottom: 80px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
