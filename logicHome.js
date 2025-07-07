@@ -19,12 +19,7 @@ const loadTemplate = () => {
         
         initSlider()
         cart()
-        // initApp() // perform function related to the current page
     })
 }
 loadTemplate()
-
-// const initApp = () => {
-//     // Load List of Products
-
-// } 
+ 

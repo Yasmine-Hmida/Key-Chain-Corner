@@ -1,7 +1,7 @@
 // Coding the Logic Part of Loading and putting everything together
 
 import cart from './template.js'
-import modal from './products.js'; // import the modal logic
+import prods from './prods.js'
 
 let app = document.getElementById('app') /* Template file content */
 let temporaryContent = document.getElementById('temporaryContent') /* Content that changes */
@@ -17,13 +17,28 @@ const loadTemplate = () => {
         contentTab.innerHTML = temporaryContent.innerHTML
         temporaryContent.innerHTML = null;
         cart()
-        modal()
-        // initApp() // perform function related to the current page
+        initProds() // Load Products
     })
 }
 loadTemplate()
 
-// const initApp = () => {
-//     // Load List of Products
+const initProds = () => {
 
-// }       
+    let listProduct = document.querySelector(".listProducts")
+    listProduct.classList.add("items")
+
+    prods.forEach((prod) => {
+        let newProd = document.createElement('div')
+        newProd.classList.add("item")
+
+        newProd.innerHTML = 
+        `
+            <img src="${prod.image}"/>
+            <h2>${prod.name}</h2>
+            <div class="price">${prod.price} DT</div>
+            <button class="addCart">Buy</button>
+        `;
+
+        listProduct.appendChild(newProd)
+    })
+}       

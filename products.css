@@ -1,15 +1,9 @@
 /* Products Styling */
-.itemContainer{
-    display: flex; 
-    flex-direction: column;
-    background-color: #f8edeb;
-    padding:10px;
-    position:relative;
-}
-
 .items{
     display: flex;
     justify-content: center;
+    background-color: #f8edeb;
+    padding:20px;
 }
 
 .item{
@@ -21,23 +15,28 @@
     padding:10px;
 }
 
-.itemImg{
+.listProducts .item img{
     width:100%;
     height:300px;
 }
 
-.itemTitle{
-    font-family: "Matemasie", sans-serif;
-    color:#ff006e;
+.listProducts .item h2{ 
+    font-family: "Abel";
+    color:gray;
     text-align: center;
     font-size: x-large;
+    font-weight: lighter;
+    margin-bottom: 5px;
 }
 
-.itemPrice{
+.listProducts .item .price{
     color:#fb6f92;
+    font-size: x-large;
+    font-weight:bold;
+    margin-bottom: 10px;
 }
 
-.productButton{
+.listProducts .item .addCart{
     background-color: #ff006e;
     color:white;
     font-size: x-large;
@@ -47,117 +46,9 @@
     cursor:pointer;
 }
 
-/* Modal Styling */
-.payment{
-    border:0.1px solid black;
-    width:500px;
-    height:640px;
-    background-color:#ffe5ec; 
-    position: fixed;
-    top: 50%;
-    left: 50%; /* This positions the top-left corner of .payment at the center of the screen.*/
-    transform: translate(-50%, -50%); /* This what really centers the Modal */
-    margin: auto;
-    padding:10px 50px;
-    display:none;
-    flex-direction:column;
-    -webkit-box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
-    -moz-box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
-    box-shadow: 5px 9px 4px 0px rgba(189,187,189,0.72);
-    z-index:70;
-}
-
-.title{ /* In the Modal */
-    display: flex;
-    justify-content: space-between;
-}
- 
-.payTitle, .done{
-    font-size: 20px;
-    color:#ff006e;
-}
-
-.closeBtn{
-    background-color: #ff006e;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    padding-top: 3px;
-    font-size: 20px;
-    font-weight: bolder;
-    cursor: pointer;
-    border:1px solid black;
-}
-
-label{
-    font-size: 14px;
-    font-weight: 300;
-    color:#fb6f92;
-    text-align: left;
-}
-
-.payInput{
-    padding:10px;
-    margin: 10px 0px;
-    border:none;
-    border-bottom: 2px solid gray;
-    background-color: #ffe5ec;
-}
-
-.payInput::placeholder{ /* Styling the Placeholder of the Inputs */
-    color:gray;
-}
-
-.cardIcons{
-    display: flex;
-} 
-
-.cardIcon{
-    margin-right:10px;
-    cursor:pointer;
-    border-radius:10px;
-}
-
-.cardIcon:hover,#visa, .selected {
-    border: 2px solid gray;
-}
-
-.cardInfo{
-   display: flex;
-   justify-content:space-between;
-   margin-left: 10px; 
-}
-
-.sm{
-    width:28%;
-}
-
-.xsm{
-    width:10%;
-}
-
-.payButton{
-    position:absolute;
-    height:40px;
-    bottom:0;
-    width:100%;
-    left:0;
-    background-color: #fb6f92;
-    color:white;
-    border:none;
-    -webkit-box-shadow: 5px -5px 14px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px -5px 14px -4px rgba(0,0,0,0.75);
-    box-shadow: 5px -5px 14px -4px rgba(0,0,0,0.75);
-    cursor:pointer;
-    font-size: medium;
-}
 
 /* Responsive Part */
 @media screen and (max-width:480px){
-    .payment{
-        width:60%;
-    }
-
     .itemContainer{
         padding:0;
     }
@@ -174,10 +65,6 @@ label{
 }
 
 @media screen and (min-width:480px){
-    .payment{
-        width:50%;
-    }
-
     .items{
         flex-wrap: wrap;
     }
