@@ -5,19 +5,18 @@ const modal = () => {
     const payButton = document.querySelector(".payButton");
     const payment = document.querySelector(".payment");
     const close = document.querySelector(".closeBtn");
-    const cardIcons = document.querySelectorAll(".cardIcon");
     const orderDone = document.querySelector(".done");
     
     // When I Click on the Buy Button, THEN the Modal will Appear
     productButtons.forEach((productButton) => {
-        productButton.addEventListener("click",()=>{
+        productButton.addEventListener("click",() => {
             payment.style.display="flex";
         });
     });
 
-    
+     
     // When I Click on the Close Button, THEN the Modal will Disappear
-    close.addEventListener("click",()=>{
+    close.addEventListener("click",() => {
         payment.style.display="none";
     })
 

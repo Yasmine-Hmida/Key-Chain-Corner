@@ -3,7 +3,7 @@
     width:100%;
     margin:auto;
     text-align: center;
-    transition:0.5s;
+    transition:0.5s; /* The "transition" prepares the element for animation if something else changes it */
 }
 
 /* Styling the Shopping Cart Tab*/
@@ -20,9 +20,9 @@
     bottom:0;
 
     display:grid;
-    grid-template-rows: 70px 1fr 70px;
+    grid-template-rows: 70px 1fr 70px; /* 1fr: Take up all remaining space after fixed rows are sized */
 
-    right: -400px;
+    right: -400px; /* Hide it off screen given that its width = 400px */
     transition:0.5s;
 }
 
@@ -38,7 +38,7 @@
 
 .cartTab .btn{
     display: grid;
-    grid-template-columns: repeat(2,1fr);    
+    grid-template-columns: repeat(2,1fr); /* = 1fr 1fr */  
 }
 
 .cartTab .btn button{
@@ -52,7 +52,7 @@
 }
 
 .cartTab .listCart{
-    overflow:auto; /* for a scroll bar*/
+    overflow:auto; /* for a scroll bar if necessary */
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -60,7 +60,7 @@
 }
 
 .cartTab #shopBag{
-    width:300px;
+    width: 300px;
     height: 300px;
 }
 
@@ -71,14 +71,22 @@
     font-size: large;
 }
 
-.cartTab .listCart::-webkit-scrollbar{
+/* CSS rules used for customizing scrollbars and toggling a sliding cart panel.  */
+
+.cartTab .listCart::-webkit-scrollbar{     
     width:0;
 }
+/*
+    Meaning: 
+    -> Targets the scrollbar inside .listCart (which is probably a scrollable list of cart items inside .cartTab).
+    -> ::-webkit-scrollbar is a pseudo-element for customizing scrollbars in WebKit-based browsers (like Chrome, Safari, Edge).
+    -> width: 0; means: Hide the scrollbar completely (but keep scroll functionality via mouse wheel, touchpad, or dragging).
+*/
 
 body.activeTabCart .cartTab{
-    right:0;
+    right:0; /* When the <body> has the class activeTabCart, this moves .cartTab to the visible position at the right edge of the screen. */
 }
 
 body.activeTabCart .container{
-    transform: translateX(-0px);
+    transform: translateX(-0px); /* It moves the .container slightly using transform (but does nothing because 0px)*/
 }

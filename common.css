@@ -11,7 +11,7 @@ body{
 nav{
     background-color:#f4acb7;
     color: white;
-    padding: 20px 50px;
+    padding: 20px 50px; /* Padding-top/bottom: 20px and Padding-left/right: 50px */
     box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.5);
     position:sticky;
     top:0;
@@ -25,15 +25,11 @@ nav{
     justify-content: space-between;
 }
 
-a{
-    text-decoration: none;
-    color:#fcfaed;
-}
-
 #logo{
     font-family: "Matemasie", sans-serif;
     color:#ff006e;
     font-size: x-large;
+    text-shadow: 1px 1px 4px black;
 }
 
 #logo:hover{
@@ -45,44 +41,23 @@ a{
     padding:0;
 }
 
-.search{
-    display: flex;
-    align-items: center;
-    background-color: #f8edeb;
-    padding:10px 20px;
-    border-radius: 10px;
-    border: 1px solid black;
-}
-
-.searchInput{
-    border: none;
-    background-color: transparent;
-}
-
-.searchInput::placeholder{
-    color:black;
-    font-family: "Abel", sans-serif;
-}
-
-#searchIcon{
-    cursor: pointer;
+a{
+    text-decoration: none;
+    color:#fcfaed;
 }
 
 .linkbtn{
     font-size: 20px;
     border-bottom: 2px solid gray;
     height:30px;
-}
-
-.linkbtn{
-    margin-left: 5px;
-    margin-right: 5px;
+    margin: 0 5px; /* Margin-top/bottom: 0px and Margin-left/right: 5px */
 }
 
 .linkbtn:hover{
     font-size: 22px;
 }
 
+/* Styling the Shopping Cart Icon */
 .shoppingCart{  /* Parent Container */
     position : relative;
 } 
@@ -90,20 +65,19 @@ a{
 .counter{
     position: absolute;
     top:0;
-    left:40px;
-    /* display: none; */
+    right:-32%;
     color: black;
 }
 
 .shoppingCart img{                                                                               
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     cursor: pointer;
 }
 
 .shoppingCart img:hover{
-    height:42px;
-    width:42px;
+    height:32px;
+    width:32px;
 }
 
 /* Styling the Footer */
@@ -150,6 +124,7 @@ footer{
 .fInput{
     padding:5px;
     margin: 5px;
+    border:0.5px solid gray;
 }
 
 .fButton{
@@ -184,10 +159,6 @@ footer{
         padding:20px;
     }
 
-    .search{
-        display:none;
-    }
-
     #logo{
         font-size: large;
     }
@@ -199,7 +170,7 @@ footer{
 
     .footerLeft, .footerRight{
         padding: 20px;
-        width:90%;
+        width: 90%;
     }
 
     .footerRight{
