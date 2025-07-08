@@ -260,3 +260,14 @@ span.next:hover , span.prev:hover{
         padding: 10px;
     }
 }
+
+/* Adding this to make the shopping cart design identical to products.css */
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border:1px solid #fb6f92;
+    padding:10px;
+}

@@ -36,8 +36,8 @@ const initProds = () => {
             <img src="${prod.image}"/>
             <h2>${prod.name}</h2>
             <div class="price">${prod.price} DT</div>
-            <button class="addCart">Buy</button>
-        `;
+            <button class="addCart" data-id="${prod.id}">Buy</button>
+        `; // data-id to track which button is clicked
 
         listProduct.appendChild(newProd)
     })

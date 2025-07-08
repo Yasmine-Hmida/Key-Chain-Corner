@@ -6,7 +6,7 @@
     transition:0.5s; /* The "transition" prepares the element for animation if something else changes it */
 }
 
-/* Styling the Shopping Cart Tab*/
+/* Styling the Shopping Cart Tab */
 .cartTab{ 
     background-color: #f8edeb;
     width:400px;
@@ -51,28 +51,72 @@
     cursor: pointer;
 }
 
+
+/* Styling the Shopping Cart if it is not empty */
 .cartTab .listCart{
     overflow:auto; /* for a scroll bar if necessary */
     display:flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
-.cartTab #shopBag{
+.listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.listCart .item img{
+    width:100%;
+}
+
+.listCart .item .quantity{
+    display: flex;
+}
+
+.listCart .item .quantity span{
+    width:25px;
+    height: 25px;
+    background-color: #f4acb7;
+    color: #ff006e;
+    font-weight: bold;
+    cursor:pointer;
+    border-radius: 50%;
+}
+
+.listCart .item .quantity span:nth-child(2){ /* Targeting the Second Span */
+    font-weight: normal;
+    background-color: transparent;
+    cursor:auto;
+}
+
+.listCart .item:nth-child(even){ /* Items in even Positions */
+    background-color: rgb(254, 225, 230);
+}
+
+
+/* Styling the Shopping Cart Slide if it is Empty */
+.cartTab .empty{ 
+    display: flex;   
+    justify-content: center;
+    align-items: center;  
+}
+
+.cartTab .empty #shopBag{ /* The Empty Shop Bag Icon */
     width: 300px;
     height: 300px;
 }
 
-.cartTab .listCart #empty{
+.cartTab .empty #emptyDesc{ 
     color:gray;
     font-family: "Abel", sans-serif;
     font-weight: 100;
-    font-size: large;
+    font-size: large; 
 }
 
-/* CSS rules used for customizing scrollbars and toggling a sliding cart panel.  */
 
+/* CSS rules used for customizing scrollbars and toggling a sliding cart panel.  */
 .cartTab .listCart::-webkit-scrollbar{     
     width:0;
 }
