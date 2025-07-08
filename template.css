@@ -20,7 +20,7 @@
     bottom:0;
 
     display:grid;
-    grid-template-rows: 70px 1fr 70px; /* 1fr: Take up all remaining space after fixed rows are sized */
+    grid-template-rows: 60px 1fr 60px 40px; /* 1fr: Take up all remaining space after fixed rows are sized */
 
     right: -400px; /* Hide it off screen given that its width = 400px */
     transition:0.5s;
@@ -51,6 +51,21 @@
     cursor: pointer;
 }
 
+.cartTab .totalPrice{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+.cartTab .totalPrice h2{
+    color:#ff006e;
+    font-size: x-large;
+    font-weight: 200;
+}
+
+.cartTab .totalPrice .totalMoney{
+    color: black;
+}
 
 /* Styling the Shopping Cart if it is not empty */
 .cartTab .listCart{
@@ -59,12 +74,13 @@
     flex-direction: column;
 }
 
-.listCart .item{
+.listCart .item {
     display: grid;
-    grid-template-columns: 70px 150px 50px 1fr;
+    grid-template-columns: 70px 130px 50px 75px 10px; 
     gap: 10px;
     align-items: center;
     text-align: center;
+    padding: 10px 5px;
 }
 
 .listCart .item img{
@@ -77,15 +93,15 @@
 
 .listCart .item .quantity span{
     width:25px;
-    height: 25px;
+    height:25px;
     background-color: #f4acb7;
+    border-radius: 50%;
     color: #ff006e;
     font-weight: bold;
     cursor:pointer;
-    border-radius: 50%;
 }
 
-.listCart .item .quantity span:nth-child(2){ /* Targeting the Second Span */
+.listCart .item .quantity span:nth-child(2){ /* Targeting the Second Span where the quantity number is */
     font-weight: normal;
     background-color: transparent;
     cursor:auto;
@@ -95,21 +111,38 @@
     background-color: rgb(254, 225, 230);
 }
 
+.listCart .item .delBtn {
+    color:#ff006e;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease;
+
+    grid-column: 5;    /* place in 5th column */
+    justify-self: end; /* align to right */
+    align-self: start; /* align to top */
+}
+
+.listCart .item .delBtn:hover {
+    transform: scale(1.3);
+}
 
 /* Styling the Shopping Cart Slide if it is Empty */
 .cartTab .empty{ 
-    display: flex;   
+    display: flex; 
+    flex-direction: column;  
     justify-content: center;
     align-items: center;  
 }
 
-.cartTab .empty #shopBag{ /* The Empty Shop Bag Icon */
-    width: 300px;
-    height: 300px;
+.cartTab .empty img{ /* The Empty Shop Bag Icon */
+    width: 280px;
+    height: 280px;
 }
 
-.cartTab .empty #emptyDesc{ 
-    color:gray;
+.cartTab .empty h1{ 
+    color:black;
     font-family: "Abel", sans-serif;
     font-weight: 100;
     font-size: large; 
