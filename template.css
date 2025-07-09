@@ -167,3 +167,18 @@ body.activeTabCart .cartTab{
 body.activeTabCart .container{
     transform: translateX(-0px); /* It moves the .container slightly using transform (but does nothing because 0px)*/
 }
+
+
+@media screen and (max-width: 480px){
+    .cartTab{ 
+        grid-template-rows: 60px 1fr 60px 10px;
+        max-height: 98%;
+    }
+
+    .listCart .item .delBtn {
+        grid-column: 5;    /* place in 5th column */
+        justify-self: end; /* align to right */
+        align-self: start; /* align to top */
+        margin-right: 15px;
+    }
+}

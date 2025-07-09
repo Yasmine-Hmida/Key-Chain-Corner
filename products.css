@@ -13,6 +13,8 @@
     margin-left: 10px;
     border:1px solid #fb6f92;
     padding:10px;
+
+    transition: 0.8s;
 }
 
 .listProducts .item img{
@@ -47,6 +49,40 @@
 }
 
 
+/* Filter Styling */
+header{
+    background-color: #f8edeb;
+    height: 100px;
+    border-bottom: 1px solid #ff006e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header ul li{
+    list-style: none;
+    padding: 20px;
+    margin: 10px;
+    float:left;
+    font-size: x-large;
+    border-radius: 35px;
+}
+
+header ul li a{
+    text-decoration: none;
+    color:#fb6f92;
+}
+
+header ul li a:hover{
+    text-shadow:1px 1px #fb6f92;
+}
+
+header ul li.active a{
+    color:#ff006e;
+    font-weight: bold;
+}
+
+
 /* Responsive Part */
 @media screen and (max-width:480px){
     .itemContainer{
@@ -63,6 +99,20 @@
     .item{
         margin-bottom: 10px;
     }
+
+    header{
+        height: 80px;
+    }
+
+    header ul{
+        margin-right: 30px;
+    }
+    
+    header ul li{
+        font-size: large;
+        padding: 10px;
+        margin:0;
+    }
 }
 
 @media screen and (min-width:480px){
@@ -72,5 +122,29 @@
 
     .item{
         margin-bottom: 10px;    
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 550px){
+    header{
+        height: 80px;
+    }
+
+    header ul{
+        margin-right: 30px;
+    }
+
+    header ul li{
+        font-size: 17px;
+        padding: 10px;
+        margin:0;
+    }
+}
+
+@media screen and (max-width:400px){
+    header ul li{
+        font-size: small;
+        padding: 10px;
+        margin:0;
     }
 }

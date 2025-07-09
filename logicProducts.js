@@ -2,6 +2,7 @@
 
 import cart from './template.js'
 import prods from './prods.js'
+import filter from './filter.js'
 
 let app = document.getElementById('app') /* Template file content */
 let temporaryContent = document.getElementById('temporaryContent') /* Content that changes */
@@ -41,4 +42,6 @@ const initProds = () => {
 
         listProduct.appendChild(newProd)
     })
+
+    filter() // Apply the Filtering
 }       

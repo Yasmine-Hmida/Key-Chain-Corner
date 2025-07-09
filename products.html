@@ -24,11 +24,24 @@
     <div id="app"></div> <!-- This is where the template will be in -->
 
     <div id="temporaryContent"> <!-- This is where changing content is --> 
-        <div class="listProducts"> <!-- This is where all our products will be in -->
+
+        <!-- Our Filter for the Products -->
+        <header>
+            <ul class="indicator">
+                <li data-filter="All" class="active"> <a href="#">All</a> </li>
+                <li data-filter="Anime"> <a href="#">Anime</a> </li>
+                <li data-filter="SuperHeroes"> <a href="#">SuperHeroes</a> </li>
+                <li data-filter="Cultured"> <a href="#">Cultural</a> </li>
+            </ul>
+        </header>
+
+        <!-- This is where all our products will be in -->
+        <div class="listProducts"> 
 
         </div>
     </div>
 
     <script type="module" src="logicProducts.js"></script>
+    <script type="module" src="filter.js"></script>
 </body>
 </html>

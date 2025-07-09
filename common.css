@@ -169,7 +169,11 @@ footer{
     }
 
     #logo{
-        font-size: large;
+        font-size: medium;
+    }
+
+    .linkbtn{
+        font-size: 15px;
     }
 
     footer{
