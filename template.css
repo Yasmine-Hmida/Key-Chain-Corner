@@ -72,6 +72,8 @@
     overflow:auto; /* for a scroll bar if necessary */
     display:flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .listCart .item {
@@ -120,14 +122,10 @@
     cursor: pointer;
     text-align: center;
     transition: transform 0.2s ease;
-
-    grid-column: 5;    /* place in 5th column */
-    justify-self: end; /* align to right */
-    align-self: start; /* align to top */
 }
 
 .listCart .item .delBtn:hover {
-    transform: scale(1.3);
+    transform: scale(1.2);
 }
 
 /* Styling the Shopping Cart Slide if it is Empty */

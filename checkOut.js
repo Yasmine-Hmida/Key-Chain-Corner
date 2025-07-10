@@ -1,5 +1,6 @@
 import products from './prods.js'; // reuse the same product list
 
+/* Coding the Final Order Part */
 // Get cart from localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -40,4 +41,22 @@ cart.forEach(item => {
 totalElement.innerText = `${total.toLocaleString('de-DE')} DT`;
 
 
+/* Showing the Card Details if radio "Pay by Card" is clicked */
+let email = document.getElementById("email").value;
+let phoneNumber = document.getElementById("phoneNumber")
 
+document.addEventListener("click" , (event) => {
+    let buttonClicked = event.target;
+    let carDetails = document.querySelector(".cardDetails")
+    var detailsDisplayed = false;
+
+    if(buttonClicked.id === "cardPayment"){
+        carDetails.style.display = "flex";
+        detailsDisplayed = true;
+    }
+
+    else if(buttonClicked.id == "delieverPayment"){
+        carDetails.style.display = "none";
+        detailsDisplayed = true;
+    }
+})

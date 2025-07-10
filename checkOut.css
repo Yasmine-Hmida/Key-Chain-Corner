@@ -2,10 +2,23 @@ body{
     background-color:#f8edeb;
 }
 
+/* Styling the "Keep Shopping" Button */
+.keepShop{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.keepBtn{
+    color:#ff006e;
+    font-size: x-large;
+    text-decoration: underline;
+}
+
 /* Styling the Form Part */
 .paymentContainer{
     padding: 40px;
-    margin-top: 50px;
     display:grid;
     grid-template-columns: repeat(2,1fr);
     gap:50px;
@@ -143,3 +156,19 @@ form .cardDetails .cardDates input{
     font-weight: normal;
 }
 
+.listCart .item{
+    gap:80px;
+    font-size: large;
+}
+
+/* Responsivness */
+@media screen and (max-width: 768px) {
+    .paymentContainer {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    form , .listCart{
+        width: fit-content; /* or a fixed width like 200px if you prefer */
+    }
+}
