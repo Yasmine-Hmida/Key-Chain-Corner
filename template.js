@@ -5,6 +5,7 @@ const cart = () => {
 
     let iconCart = document.querySelector("#shopCart") // The Shopping Cart Icon
     let closeBtn = document.querySelector(".cartTab .close") // The Close Button
+    let checkOutBtn = document.querySelector(".cartTab .checkOut") // The Checkout Button
     let body = document.querySelector("body")
 
     let cart = []; // Our Shopping Cart that will contain the Products
@@ -19,7 +20,13 @@ const cart = () => {
         body.classList.toggle("activeTabCart");
     })
 
-
+    // Checkout Payment
+    checkOutBtn.addEventListener("click", () => {
+        if(!(cart.length == 0)){
+            window.location.href = "./checkOut.html";
+        }
+    });
+    
     // setProductInCart Function
     const setProductInCart = (idProduct , quantity , position) => {
         if(quantity > 0){ // quantity >= 1

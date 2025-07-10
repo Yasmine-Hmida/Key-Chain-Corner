@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckOut</title>
+
+    <link rel="icon" href="images/chain.png">
+
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="checkOut.css">
+    
+    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Matemasie&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Dosis:wght@200..800&family=Matemasie&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="home.html" id="logo">Key Chain Corner</a>
+        </div>
+    </nav>
+
+    <!-- Add keep shopping button -->
+
+    <div class="paymentContainer">
+        <!-- <div class="checkOut"> -->
+        <form action="" method="post">
+
+            <label for="title" id="titleLabel">Client Information</label>
+
+            <input type="email" name="email" id="email" placeholder="Email">
+
+            <div class="fullName">
+                <input type="text" name="firstName" id="firstName" placeholder="First Name">
+                <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+            </div>
+                
+            <div class="phoneNumber">
+                <img src="./images/phone-call.png" alt="Phone Call Icon">
+                <input type="text" name="PhoneNumber" id="phoneNumber" placeholder="216+">
+            </div>
+
+            <input type="text" name="address" id="address" placeholder="Address">
+
+            <!-- payments radios -->
+            <div class="payCard">
+                <input type="radio" name="payment" id="cardPayment" value="cardPayment">
+                <label for="cardPayment">Pay by Card</label>
+            </div>
+            <div class="payDeliever">
+                <input type="radio" name="payment" id="delieverPayment" value="delieverPayment">
+                <label for="delieverPayment">Pay after Delievery</label>
+            </div>
+
+            <!-- Card Details -->
+            <div class="cardDetails">
+                <input type="text" name="cardNumber" id="cardNumber" placeholder="Card Number">
+                <div class="cardDates">
+                    <input type="text" name="expirationDate" id="expirationDate" placeholder="Expiration Date(MM / YY)">
+                    <input type="text" name="securityCode" id="securityCode" placeholder="Security Code">
+                </div>
+                <input type="text" name="cardName" id="cardName" placeholder="Name on Card">
+            </div>
+
+            <button type="submit">Order</button>
+        </form>
+        
+        <!-- Order Summary -->
+        <div class="listCart">
+            <h1>Your Order Summary</h1>
+
+            <div class="checkoutCart"></div> <!-- Generated with JS -->
+
+            <h2>Total: <span class="totalMoney"></span></h2>
+        </div>
+    </div>
+
+    <script type="module" src="./checkOut.js"></script>
+</body>
+</html>

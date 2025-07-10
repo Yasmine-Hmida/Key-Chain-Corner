@@ -81,6 +81,8 @@
     align-items: center;
     text-align: center;
     padding: 10px 5px;
+    border:1px solid #ff006e;
+    margin-bottom: 5px;
 }
 
 .listCart .item img{

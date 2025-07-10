@@ -7,6 +7,10 @@ body{
     box-sizing: border-box;
 }
 
+::selection { /* Color of when I select something*/
+  background:#fcdde2;  
+}
+
 /* Styling the Navbar */
 nav{
     background-color:#f4acb7;
