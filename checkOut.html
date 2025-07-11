@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CheckOut</title>
+    <title>CheckOut - Key Chain Corner</title>
 
     <link rel="icon" href="images/chain.png">
 
@@ -33,12 +33,13 @@
     </div>
 
     <div class="paymentContainer">
-        <!-- <div class="checkOut"> -->
-        <form action="" method="post">
-
+        <form>
             <label id="titleLabel">Client Information</label>
 
-            <input type="email" name="email" id="email" placeholder="Email">
+            <div class="emailDiv">
+                <input type="text" name="email" id="email" placeholder="Email">
+                <p class="messageEmail"></p>
+            </div>
 
             <div class="fullName">
                 <input type="text" name="firstName" id="firstName" placeholder="First Name">
@@ -47,7 +48,8 @@
                 
             <div class="phoneNumber">
                 <img src="./images/phone-call.png" alt="Phone Call Icon">
-                <input type="text" name="PhoneNumber" id="phoneNumber" placeholder="216+">
+                <input type="text" name="PhoneNumber" id="phoneNumber" placeholder="+216">
+                <p class="messagePhone"></p>
             </div>
 
             <input type="text" name="address" id="address" placeholder="Address">
@@ -57,6 +59,7 @@
                 <input type="radio" name="payment" id="cardPayment" value="cardPayment">
                 <label for="cardPayment">Pay by Card</label>
             </div>
+            
             <div class="payDeliever">
                 <input type="radio" name="payment" id="delieverPayment" value="delieverPayment">
                 <label for="delieverPayment">Pay after Delievery</label>
@@ -64,14 +67,28 @@
 
             <!-- Card Details -->
             <div class="cardDetails">
-                <input type="text" name="cardNumber" id="cardNumber" placeholder="Card Number">
-                <div class="cardDates">
-                    <input type="text" name="expirationDate" id="expirationDate" placeholder="Expiration Date(MM / YY)">
-                    <input type="text" name="securityCode" id="securityCode" placeholder="Security Code">
+                <div class="cardNumberDiv">
+                    <input type="text" name="cardNumber" id="cardNumber" placeholder="Card Number">
+                    <p class="messageCardNumber"></p>
                 </div>
+        
+                <div class="cardDates">
+                    <div class="expirationDateDiv">
+                        <input type="text" name="expirationDate" id="expirationDate" placeholder="Expiration Date(MM / YY)">
+                        <p class="messageExpirationDate"></p>
+                    </div>
+
+                    <div class="securityCodeDiv">
+                        <input type="text" name="securityCode" id="securityCode" placeholder="Security Code">
+                        <p class="messageSecurityCode"></p>
+                    </div>
+                </div>
+
                 <input type="text" name="cardName" id="cardName" placeholder="Name on Card">
             </div>
 
+
+            <p class="finalMessage"></p>
             <button type="submit">Order</button>
         </form>
         

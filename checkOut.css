@@ -30,7 +30,7 @@ form{
     border: 2px solid #ff006e;
     padding: 20px;
 
-    align-self: flex-start; /* prevents it from stretching */
+    /* align-self: flex-start; prevents it from stretching */
     flex-shrink: 0;
 
     transition: 0.8s; 
@@ -40,14 +40,27 @@ form *{
     margin-bottom: 10px;
 }
 
-form input[type=text], input[type=email]{
+form p{
+    color:#ff006e;
+    font-weight: bold;
+    font-size: x-large;
+    display: none;
+    margin-top: 0;
+}
+
+form input[type=text]{
     width: 100%;
     height: 40px;
-    border: 1px solid #ff006e;
+    border: 1px solid #f4acb7;
     background-color: #f8f4f6;
     outline:#ff006e;
     font-family: "Abel", sans-serif;
     font-size: 20px;
+}
+
+form input::placeholder{
+    font-family: "Abel", sans-serif;
+    font-size: large;
 }
 
 form input[type="radio"] {
@@ -58,16 +71,10 @@ form input[type="radio"] {
     cursor: pointer;
 }
 
-form input::placeholder{
-    font-family: "Abel", sans-serif;
-    font-size: large;
-}
-
 form label , h1{
     margin:0;
     font-size: large;
 }
-
 
 form #titleLabel , .listCart h1{
     font-size: xx-large;
@@ -75,6 +82,16 @@ form #titleLabel , .listCart h1{
     font-weight: bold;
     text-align: center;
     margin-bottom: 30px;
+}
+
+form .emailDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+form .emailDiv #email{
+    width: 70%;
+    margin-bottom: 0;
 }
 
 form .fullName{
@@ -89,8 +106,16 @@ form .fullName input{
 
 form .phoneNumber{
     display: flex;
-    justify-content: center;
-    width:40%;
+    width:70%;
+}
+
+form .phoneNumber * {
+    margin:0;
+    margin-right: 10px;
+}
+
+form .phoneNumber input{
+    width: 200px;
 }
 
 form .phoneNumber img{
@@ -104,14 +129,8 @@ form #address{
     width: 60%;
 }
 
-form #email{
-    width: 70%;
-}
-
 form button{
-    width: 20%;
-    transform: translateX(200%);
-    padding: 5px;
+    padding: 3px;
     font-size: xx-large;
     font-family: "Abel", sans-serif;
     font-weight: bold;
@@ -123,22 +142,33 @@ form button{
 }
 
 form .cardDetails{
-    /* display:flex; */
     display: none;
     flex-direction: column;
 }
 
-form .cardDetails input{
-    width: 70%;
+form .cardDetails .cardNumberDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+form .cardDetails .cardNumberDiv input{
+    margin-bottom: 0;
+    width:70%;
 }
 
 form .cardDetails .cardDates{
     display: flex;
-    width: 80%;
+    width: 100%;
+    justify-content: start;
+}
+
+form .cardDetails .cardDates *{
+    margin-right: 20px;
+    
 }
 
 form .cardDetails .cardDates input{
-    margin-right: 5px;
+    margin-bottom: 0;
 }
 
 /* Styling the Shopping Cart */
@@ -164,11 +194,34 @@ form .cardDetails .cardDates input{
 /* Responsivness */
 @media screen and (max-width: 768px) {
     .paymentContainer {
-        grid-template-columns: 1fr;
-        justify-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .paymentContainer .listCart{
+        width:100%;
+    }
+
+    .paymentContainer p{
+        font-size: large;
     }
 
     form , .listCart{
-        width: fit-content; /* or a fixed width like 200px if you prefer */
+        width: fit-content; 
+    }
+
+    .listCart .item{
+        gap:5px;
+        grid-template-columns: 25% 20% 20% 20%;
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1300px){
+    .paymentContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
