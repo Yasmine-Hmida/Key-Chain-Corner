@@ -29,10 +29,8 @@ form{
     flex-direction: column;
     border: 2px solid #ff006e;
     padding: 20px;
-
-    /* align-self: flex-start; prevents it from stretching */
-    flex-shrink: 0;
-
+    flex-shrink: 0; /* Prevents it from stretching */
+    height:fit-content;
     transition: 0.8s; 
 }
 
@@ -43,9 +41,13 @@ form *{
 form p{
     color:#ff006e;
     font-weight: bold;
-    font-size: x-large;
+    font-size: large;
     display: none;
     margin-top: 0;
+}
+
+form .finalMessage{
+    font-size: x-large;
 }
 
 form input[type=text]{
@@ -58,17 +60,17 @@ form input[type=text]{
     font-size: 20px;
 }
 
-form input::placeholder{
-    font-family: "Abel", sans-serif;
-    font-size: large;
-}
-
 form input[type="radio"] {
-    accent-color: #ff006e;
+    accent-color: #ff006e; /* So when i click on it, the background is not blue */
     width: 13px;
     height: 13px;
     transform: scale(1.2);
     cursor: pointer;
+}
+
+form input::placeholder{
+    font-family: "Abel", sans-serif;
+    font-size: large;
 }
 
 form label , h1{
@@ -84,12 +86,16 @@ form #titleLabel , .listCart h1{
     margin-bottom: 30px;
 }
 
+form #cardPaymentLabel , #delieverPaymentLabel{
+    cursor: pointer;
+}
+
 form .emailDiv{
     display: flex;
     flex-direction: column;
 }
 
-form .emailDiv #email{
+form .emailDiv #email{ /* The Input */ 
     width: 70%;
     margin-bottom: 0;
 }
@@ -129,30 +135,21 @@ form #address{
     width: 60%;
 }
 
-form button{
-    padding: 3px;
-    font-size: xx-large;
-    font-family: "Abel", sans-serif;
-    font-weight: bold;
-    border: 1px solid #ff006e;
-    background-color: #ff006e;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
 form .cardDetails{
     display: none;
     flex-direction: column;
 }
 
-form .cardDetails .cardNumberDiv{
+form .cardDetails .cardNumberDiv , .cardNameDiv{
     display: flex;
     flex-direction: column;
 }
 
-form .cardDetails .cardNumberDiv input{
+form .cardDetails input{
     margin-bottom: 0;
+}
+
+form .cardDetails .cardNumberDiv input, #cardName {
     width:70%;
 }
 
@@ -160,15 +157,23 @@ form .cardDetails .cardDates{
     display: flex;
     width: 100%;
     justify-content: start;
+    margin-bottom: 0;
 }
 
 form .cardDetails .cardDates *{
-    margin-right: 20px;
-    
+    margin-right: 20px; 
 }
 
-form .cardDetails .cardDates input{
-    margin-bottom: 0;
+form button{
+    padding: 3px;
+    font-size: xx-large;
+    font-family: "Abel", sans-serif;
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: #ff006e;
+    color: white;
+    cursor: pointer;
 }
 
 /* Styling the Shopping Cart */
@@ -189,7 +194,7 @@ form .cardDetails .cardDates input{
 .listCart .item{
     gap:80px;
     font-size: large;
-}
+} 
 
 /* Responsivness */
 @media screen and (max-width: 768px) {

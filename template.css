@@ -66,7 +66,7 @@
 .cartTab .totalPrice .totalMoney{
     color: black;
 }
-
+ 
 /* Styling the Shopping Cart if it is not empty */
 .cartTab .listCart{
     overflow:auto; /* for a scroll bar if necessary */

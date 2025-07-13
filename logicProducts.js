@@ -1,4 +1,4 @@
-// Coding the Logic Part of Loading and putting everything together
+// Coding the Logic Part of Loading and putting everything together in the products' page
 
 import cart from './template.js'
 import prods from './prods.js'
@@ -20,7 +20,7 @@ const loadTemplate = () => {
         cart()
         initProds() // Load Products
     })
-}
+} 
 loadTemplate()
 
 const initProds = () => {

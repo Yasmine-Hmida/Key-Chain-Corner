@@ -1,5 +1,5 @@
 // Coding the Shopping Cart Slide
-
+ 
 import products from './prods.js'
 const cart = () => {
 
@@ -23,7 +23,7 @@ const cart = () => {
     // Checkout Payment
     checkOutBtn.addEventListener("click", () => {
         if(!(cart.length == 0)){
-            window.location.href = "./checkOut.html";
+            window.location.href = "./checkOut.html"; // Redirection to the Checkout if there are indeed products
         }
     });
     
@@ -144,7 +144,7 @@ const cart = () => {
 
     /* This code gets the stored cart back when the user visits the site again, and uses JSON.parse() to turn it back into an array */
     const initApp = () => {
-        if(localStorage.getItem('cart')){
+        if(localStorage.getItem('cart')){ // If the cart does exist in the LocalStorage
             cart = JSON.parse(localStorage.getItem('cart'))
         }
         refreshCartHTML();

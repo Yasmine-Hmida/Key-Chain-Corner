@@ -1,7 +1,7 @@
 import products from './prods.js'; // reuse the same product list
 
 /* Coding the Final Order Part */
-
+ 
 // Get cart from localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -42,6 +42,7 @@ cart.forEach(item => {
 totalElement.innerText = `${total.toLocaleString('de-DE')} DT`;
 
 // -----------------------------------------------------------------------------------------------------------------------------------
+/* Coding the Checkout Validation Part */
 
 // Helper function to test input with regex
 function testRegex(input, regex, messageParagraph, message) {
@@ -57,7 +58,7 @@ function testRegex(input, regex, messageParagraph, message) {
 
 // Helper to check if any value is empty
 function isEmpty(...values) {
-    return values.some(value => value.trim() === '');
+    return values.some(value => value.trim() === ''); // .some(...) : returns true if any element in the array passes the test inside the callback.
 }
 
 // Show final message
@@ -68,6 +69,7 @@ function showFinalMessage(success, message = "Thanks for Ordering from Us!") {
 
     if(success){
         localStorage.removeItem("cart"); // Clear the Cart
+
         // Redirect to the HomePage after 3 seconds
         setTimeout(() => {
             window.location.href = "./home.html"; 
@@ -105,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const firstName = document.getElementById("firstName").value;
         const lastName = document.getElementById("lastName").value;
         const address = document.getElementById("address").value;
-        const cardName = document.getElementById("cardName").value;
+        const cardNameInput = document.getElementById("cardName");
 
         // Radio Buttons
         const cardRadio = document.getElementById("cardPayment");
@@ -123,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const pCard = document.querySelector(".messageCardNumber");
         const pDate = document.querySelector(".messageExpirationDate");
         const pCode = document.querySelector(".messageSecurityCode");
+        const pCardName = document.querySelector(".messageCardName");
         const finalMsg = document.querySelector(".finalMessage");
 
         // Initializing the Error Paragraphs
@@ -131,6 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
         pCard.textContent = ''
         pDate.textContent = ''
         pCode.textContent = ''
+        pCardName.textContent = ''
         finalMsg.textContent = ''
 
         // Validate Required Fields
@@ -156,14 +160,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const validCard = testRegex(cardNumberInput, /^\d{13,19}$/, pCard, "Invalid Card Number!");
             const validExp = testRegex(expirationDateInput, /^(0[1-9]|1[0-2])\s?\/\s?\d{2}$/, pDate, "Invalid Expiration Date!");
             const validCode = testRegex(securityCodeInput, /^\d{3,4}$/, pCode, "Invalid Security Code");
+            const validCardName = testRegex(cardNameInput, /^.+$/, pCardName, "The Name Card is Missing!");
 
-            if(isEmpty(cardName)){
-                finalMsg.style.display="block";
-                finalMsg.textContent = "The Name Card is Missing!"
-                return;
-            }
-
-            const allValid = validEmail && validPhone && validCard && validExp && validCode && (!isEmpty(cardName));
+            const allValid = validEmail && validPhone && validCard && validExp && validCode && validCardName;
             showFinalMessage(allValid);
         } 
         else {

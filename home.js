@@ -8,7 +8,7 @@ const initSlider = () => {
     let next = document.querySelector(".next");
     let prev = document.querySelector(".prev");
     let dots = document.querySelectorAll(".dot");
-
+ 
     let counter = 0;
     let deletInterval;
  

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CheckOut - Key Chain Corner</title>
@@ -32,6 +32,7 @@
         <a href="./products.html" class="keepBtn">Modify your Order</a>
     </div>
 
+    <!-- Payment Section -->
     <div class="paymentContainer">
         <form>
             <label id="titleLabel">Client Information</label>
@@ -54,19 +55,20 @@
 
             <input type="text" name="address" id="address" placeholder="Address">
 
-            <!-- payments radios -->
+            <!-- payment radios -->
             <div class="payCard">
                 <input type="radio" name="payment" id="cardPayment" value="cardPayment">
-                <label for="cardPayment">Pay by Card</label>
+                <label for="cardPayment" id="cardPaymentLabel">Pay by Card</label>
             </div>
             
             <div class="payDeliever">
                 <input type="radio" name="payment" id="delieverPayment" value="delieverPayment">
-                <label for="delieverPayment">Pay after Delievery</label>
+                <label for="delieverPayment" id="delieverPaymentLabel">Pay after Delievery</label>
             </div>
 
             <!-- Card Details -->
             <div class="cardDetails">
+
                 <div class="cardNumberDiv">
                     <input type="text" name="cardNumber" id="cardNumber" placeholder="Card Number">
                     <p class="messageCardNumber"></p>
@@ -84,7 +86,11 @@
                     </div>
                 </div>
 
-                <input type="text" name="cardName" id="cardName" placeholder="Name on Card">
+                <div class="cardNameDiv">
+                    <input type="text" name="cardName" id="cardName" placeholder="Name on Card">
+                    <p class="messageCardName"></p>
+                </div>
+
             </div>
 
 
@@ -96,7 +102,7 @@
         <div class="listCart">
             <h1>Your Final Order Summary</h1>
 
-            <div class="checkoutCart"></div> <!-- Generated with JS -->
+            <div class="checkoutCart"></div> <!-- Generated with JS from the shopping card -->
 
             <h2>Total: <span class="totalMoney"></span></h2>
         </div>
