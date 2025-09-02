@@ -30,6 +30,10 @@
 This project must be run on a local server (such as **Live Server** in VS Code) for it to work correctly.
 
 ```bash
+# Clone the repository:
 git clone https://github.com/your-username/keychain-corner.git
+
+# Navigate into the project folder:
 cd keychain-corner
-# Run home.html on the local server
+
+# Run home.html on the local server using live server for example
