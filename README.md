@@ -1,10 +1,10 @@
 # KeyChain Corner
 
-**KeyChain Corner** is an E-commerce website built with **HTML, CSS, and JavaScript**, dedicated to showcasing and filtering a collection of unique keychains.
+**KeyChain Corner** is an E-commerce website built with **HTML, CSS,** and **JavaScript**. It showcases a collection of various keychains, and lets users browse, filter by category, and buy them.
 
 ---
 
-## 🛍️ Features
+## Features
 
 - Displays keychains with images, titles, and prices.
 - Filter products by category (e.g., Anime , SuperHeroes...)
@@ -17,7 +17,7 @@
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 <img width="1920" height="873" alt="image" src="https://github.com/user-attachments/assets/e04c392b-e876-4313-8ec9-c15fc65c0f37" />
 <img width="1920" height="870" alt="image" src="https://github.com/user-attachments/assets/91edb0ac-9a9a-4d05-ab3b-5e031f3de2f0" />
@@ -25,13 +25,13 @@
 
 ---
 
-## 🛠️ How to Run
+## How to Run
 
 This project must be run on a local server (such as **Live Server** in VS Code) for it to work correctly.
 
 ```bash
 # Clone the repository:
-git clone https://github.com/your-username/keychain-corner.git
+git clone https://github.com/Yasmine-Hmida/keychain-corner.git
 
 # Navigate into the project folder:
 cd keychain-corner
